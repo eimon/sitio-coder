@@ -1,29 +1,33 @@
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Lacar Suites</title>
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Tilt+Warp&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <header>
+    <header class="flex-container">
         <div class="logo">
             <img src="img/logo.png" alt="Logo Principal">
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="about.html">ACERCA DE</a></li>
-                <li><a href="contacto.html" class="seleccionado">CONTACTO</a></li>
+                <a href="index.html"><li>INICIO</li></a>
+                <a href="unidades.html"><li>UNIDADES</li></a>
+                <a href="contacto.html" class="seleccionado"><li>CONTACTO</li></a>
             </ul>
         </nav>
     </header>
-    
+
     <main>
+        <div class="container">
         <h1>Formulario de contacto</h1>
         <div class="form">
             <form action="gracias.html">
@@ -54,11 +58,16 @@
                 <input type="submit" value="Enviar" id="enviar">
             </form>
         </div>
+        </div>
     </main>
 
     <footer>
         <p>Copyright - Todos los derechos reservados - Amon Ascaso</p>
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
