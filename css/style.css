@@ -324,7 +324,7 @@ input[type=submit]{
     border-color:#2b3a67;
 }
 
-@media only screen and (min-height:850px) {
+@media only screen and (min-height:796px) and (min-width:651px) {
     .contacto{
         display: flex;
         align-items: center;
@@ -347,7 +347,12 @@ input[type=submit]{
                              'mensaje'
                              'enviar';
         height: 100%;
+        width: 100%;
     }
+}
+
+.about img{
+    max-width: 100%;
 }
 
 /* paleta
