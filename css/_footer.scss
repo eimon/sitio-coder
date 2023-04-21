@@ -1,0 +1,13 @@
+footer {
+    width: 100%;
+    min-height: 70px;
+    background-color: $color5;
+
+    p,
+    input[type=submit] {
+        color: $color2;
+        margin: 0;
+        text-align: center;
+        font-family: $fuenteSecundaria;
+    }
+}

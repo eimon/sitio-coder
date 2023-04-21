@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Lacar Suites</title>
+    <title>Unidades - Lacar Suites</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,11 +18,24 @@
             <a href="index.html"><img src="img/logo.png" alt="Logo Principal"></a>
         </div>
         <nav>
-            <ul>
-                <a href="index.html"><li>INICIO</li></a>
-                <a href="unidades.html" class="seleccionado"><li>UNIDADES</li></a>
-                <a href="contacto.html"><li>CONTACTO</li></a>
-            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuHamburguesa" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg></span>
+            </button>
+            <div class="collapse" id="menuHamburguesa">
+                <ul>
+                    <a href="index.html" class="seleccionado">
+                        <li>INICIO</li>
+                    </a>
+                    <a href="unidades.html">
+                        <li>UNIDADES</li>
+                    </a>
+                    <a href="contacto.html">
+                        <li>CONTACTO</li>
+                    </a>
+                </ul>
+        </div>
         </nav>
     </header>
 

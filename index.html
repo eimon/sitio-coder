@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Tilt+Warp&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 </head>
 
 <body>
@@ -17,80 +18,78 @@
             <a href="index.html"><img src="img/logo.png" alt="Logo Principal"></a>
         </div>
         <nav>
-            <ul>
-                <a href="index.html" class="seleccionado"><li>INICIO</li></a>
-                <a href="unidades.html"><li>UNIDADES</li></a>
-                <a href="contacto.html"><li>CONTACTO</li></a>
-            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuHamburguesa" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg></span>
+            </button>
+            <div class="collapse" id="menuHamburguesa">
+                <ul>
+                    <a href="index.html" class="seleccionado">
+                        <li>INICIO</li>
+                    </a>
+                    <a href="unidades.html">
+                        <li>UNIDADES</li>
+                    </a>
+                    <a href="contacto.html">
+                        <li>CONTACTO</li>
+                    </a>
+                </ul>
+        </div>
         </nav>
     </header>
 
     <main>
         <div class="container">
-            <h1>Lacar Suites</h1>
-            <section class="contenido">
-                <aside>
-                    <img src="img/lateral.jpg" alt="Lateral">
-                </aside>
-                <article>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo vestibulum mauris, dictum
-                    hendrerit nisi varius vel. Sed blandit ante tempus urna ultrices imperdiet. Vestibulum ante ipsum
-                    primis
-                    in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus mollis nunc in lorem lacinia
-                    tempor.
-                    Sed ac rutrum mi. Curabitur eleifend interdum odio vitae suscipit. Pellentesque habitant morbi
-                    tristique
-                    senectus et netus et malesuada fames ac turpis egestas. Morbi eget dapibus tortor. Pellentesque
-                    convallis ante quis lectus rutrum rhoncus. Duis congue eu lacus nec iaculis. Maecenas vitae metus
-                    non
-                    metus gravida accumsan.
-
-                    Maecenas varius quam eget volutpat porta. Cras feugiat venenatis erat ut consectetur. Donec interdum
-                    magna et quam mollis consequat. Suspendisse elit justo, consequat non nulla tempor, faucibus
-                    accumsan
-                    orci. Vivamus fermentum ac tellus sed lobortis. Etiam non risus sit amet lorem mollis rhoncus. Donec
-                    non
-                    scelerisque lorem. Nulla eleifend lectus felis, sed blandit libero accumsan vitae. Fusce faucibus
-                    ornare
-                    libero. Etiam vehicula lectus nisi, eget placerat libero posuere eu. Nam in ullamcorper eros.
-                    Aliquam
-                    laoreet gravida quam, eget molestie neque.
-
-                    Donec congue ipsum elit, consequat tristique leo scelerisque et. Suspendisse ac quam erat. Etiam
-                    vitae
-                    leo in odio maximus consectetur. Nullam metus erat, egestas a mollis vel, faucibus quis lorem.
-                    Vestibulum euismod, lorem non varius imperdiet, lorem justo scelerisque odio, et blandit turpis elit
-                    non
-                    arcu. Nam cursus leo at nulla eleifend, a sagittis enim dignissim. Pellentesque lacinia consequat
-                    accumsan.
-
-                    Etiam rhoncus tellus eu congue eleifend. Cras viverra eleifend velit, ac bibendum augue interdum a.
-                    Phasellus et turpis ante. Praesent interdum egestas aliquet. Aliquam rhoncus ligula pharetra
-                    placerat
-                    vestibulum. Aliquam a ligula sollicitudin, convallis velit eget, sollicitudin arcu. Nulla a felis
-                    vitae
-                    elit suscipit posuere sed ac enim. Donec aliquet lorem eget blandit consectetur. Sed non quam
-                    ultricies,
-                    egestas dui at, euismod ipsum.
-                    </p>
-                </article>
-            </section>
-                    <div class="about">
-                        <h1>Acerca de Lacar Suites</h1>
-                        <p>Se trata de un complejo turístico ubicado en el corazón de <span>San Martín de los Andes</span>, preparado para impulsar todas las actividades que la ciudad/pueblo tiene para ofrecer.</p>
-                        <p>Está dotado con cocina completa y acceso a una <span>pileta climatizada</span> de uso común.</p>
-                        <br>
-                        <div>
-                            <img src="img/ubicacion.jpg" alt="Ubicacion">
-                        </div>
+            <div class="bienvenida p-5 my-4">
+                <h2>
+                    ¡Bienvenido al complejo turístico de departamentos en San Martín de los Andes, donde tus vacaciones
+                    soñadas se hacen realidad!
+                </h2>
+            </div>
+            <div class="caracteristicas">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6">
+                        <img src="img/pasillo.jpg" alt="">
                     </div>
-        </div>
+                    <div class="col-12 col-md-6">
+                        <p>Nuestro complejo cuenta con todo lo necesario para que disfrutes al máximo de tu estadía en
+                            esta hermosa ciudad patagónica. Además de encontrarnos en el corazón de la ciudad, a pocos
+                            metros del impresionante Lago Lacar, todos nuestros departamentos cuentan con cocina
+                            completa para que puedas cocinar tus propias comidas y sentirte como en casa.</p>
+
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p>
+                            Y si buscas relajarte y disfrutar del sol patagónico, ¡no te preocupes! Nuestro complejo cuenta
+                            con una hermosa pileta donde podrás refrescarte y disfrutar del clima mientras te relajas en el
+                            agua.
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="img/pileta.jpg" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="img/fondo.jpg" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p>
+                            En definitiva, el complejo turístico de departamentos en San Martín de los Andes es el lugar
+                            perfecto para que vivas unas vacaciones inolvidables en uno de los destinos más hermosos de la
+                            Patagonia. ¡Te esperamos con los brazos abiertos!
+                        </p>
+                    </div>
+                </div>
+            </div>
     </main>
 
     <footer class="flex-center p-2">
         <p>Copyright - Todos los derechos reservados - Amon Ascaso</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

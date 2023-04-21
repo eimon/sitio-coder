@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +14,14 @@ header {
   margin: auto;
   height: 100px;
   font-family: "Tilt Warp", cursive;
+  display: inline-block;
+  background-color: #add7f6;
+}
+
+nav button {
+  position: absolute;
+  top: 27px;
+  right: 20px;
 }
 
 .flex-container {
@@ -44,12 +53,184 @@ nav a {
   color: #2b3a67;
   padding: 15px;
   border-radius: 15px;
+  transition-property: transform, box-shadow;
+  transition-duration: 500ms;
 }
 nav a:hover {
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.1843137255);
+  transform: scale(1.1);
   background-color: #1d7874;
   color: #ecce8e;
 }
 
+.seleccionado {
+  border: #ecce8e;
+  color: #1d7874;
+}
+
+/** Imagen de bienvenida con un texto que entra con efecto de barrida horizontal **/
+.bienvenida {
+  background-image: url(/img/frente2x.png);
+  background-size: cover;
+  background-position: center;
+  height: 65%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.bienvenida h2 {
+  font-weight: bold;
+  text-align: center;
+  color: azure;
+  animation-name: barrida;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation-duration: 1s;
+}
+
+@keyframes barrida {
+  0% {
+    filter: opacity(0);
+    translate: 100px;
+  }
+  100% {
+    filter: opacity(1);
+    translate: 0;
+  }
+}
+main {
+  width: 100%;
+  background: linear-gradient(45deg, #1d7874, #2b3a67);
+  padding-bottom: 30px;
+  font-family: "Roboto Mono", monospace;
+  color: black;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  padding: 25px;
+}
+
+.unidades {
+  background: linear-gradient(90deg, white, #ecce8e);
+  border-radius: 20px;
+  border: 2px solid #1d7874;
+}
+.unidades img {
+  border-radius: 20px;
+  transition-property: transform, box-shadow;
+  transition-duration: 1s;
+}
+.unidades img:hover {
+  transform: scale(1.3);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.1843137255);
+}
+
+/** Filas de características en la página principal**/
+.caracteristicas {
+  width: 100%;
+  max-width: 1200px;
+}
+.caracteristicas img {
+  width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  margin: 8px;
+}
+
+.form {
+  background-color: #1d7874;
+  padding: 2em;
+  border-radius: 20px;
+}
+
+.form div input,
+select,
+textarea {
+  width: 100%;
+  height: 40px;
+}
+
+textarea {
+  height: 100px !important;
+}
+
+label,
+input[type=submit] {
+  color: #ecce8e;
+  font-weight: 800;
+}
+
+input[type=submit] {
+  background-color: #2b3a67;
+  border-radius: 10px;
+  border-color: #2b3a67;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+#mensaje {
+  height: 300px;
+}
+
+.gracias {
+  display: flex;
+  justify-content: center;
+}
+.gracias h2 {
+  line-height: 600px;
+  text-align: center;
+  color: #ecce8e;
+  opacity: 1;
+  animation: fade-in 1s;
+}
+
+/** Transición para aparecer después del loader **/
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear;
+  position: absolute;
+  align-self: center;
+  opacity: 0;
+}
+
+@keyframes rotation {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
 footer {
   width: 100%;
   min-height: 70px;
@@ -63,64 +244,23 @@ footer input[type=submit] {
   font-family: "Roboto Mono", monospace;
 }
 
-main {
-  width: 100%;
-  background: linear-gradient(45deg, #1d7874, #2b3a67);
-  padding-bottom: 30px;
-  font-family: "Roboto Mono", monospace;
-  color: black;
-}
-
-.seleccionado {
-  border: #ecce8e;
-  color: #1d7874;
-}
-
-h1 {
-  text-align: center;
-  padding: 25px;
-}
-
-article {
-  width: 70%;
-}
-article p {
-  padding: 20px;
-}
-
-aside {
-  width: 30%;
-  color: white;
-  text-align: center;
-  overflow: hidden;
-}
-aside ul {
-  list-style: none;
-}
-
-@media only screen and (max-width: 950px) {
-  aside {
-    width: 90%;
-    height: 150px;
-    margin: auto;
-    display: flex;
-    align-items: center;
+/** Ocultar el menú hamburguesa para dispositivos tablet y desktop**/
+@media only screen and (min-width: 651px) {
+  button {
+    display: none;
   }
-  aside img {
-    width: 100%;
-  }
-  article {
-    width: 90%;
-    margin: auto;
+  .collapse {
+    display: contents !important;
   }
 }
 @media only screen and (max-width: 650px) {
+  header {
+    position: sticky;
+    top: 0;
+  }
   .logo {
     width: 100%;
     text-align: center;
-    position: sticky;
-    top: 0;
-    background-color: #add7f6;
   }
   .logo img {
     margin: 0;
@@ -133,6 +273,7 @@ aside ul {
   nav ul {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 0;
   }
   nav li {
@@ -182,136 +323,11 @@ aside ul {
     height: 100%;
   }
 }
-.unidades {
-  background: linear-gradient(90deg, white, #ecce8e);
-  border-radius: 20px;
-  border: 2px solid #1d7874;
+@media screen only and (min-width: 797px) {
+  .form {
+    height: 500px;
+  }
 }
-.unidades img {
-  border: 2px solid black;
-}
-
-.contenido {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
-}
-
-form {
-  width: 80%;
-  margin: auto;
-}
-
-.about,
-form {
-  text-align: center;
-}
-
-span {
-  color: #add7f6;
-}
-
-input {
-  width: 800px;
-  height: 30px;
-}
-
-#mensaje {
-  height: 300px;
-}
-
-.gracias h2 {
-  line-height: 600px;
-  text-align: center;
-  color: #ecce8e;
-}
-
-.flex-center {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-svg {
-  margin: 8px;
-}
-
-.nombre {
-  grid-area: nombre;
-}
-
-.apellido {
-  grid-area: apellido;
-}
-
-.telefono {
-  grid-area: telefono;
-}
-
-.email {
-  grid-area: email;
-}
-
-.pasajeros {
-  grid-area: pasajeros;
-}
-
-.fechaInicio {
-  grid-area: fechaInicio;
-}
-
-.fechaFin {
-  grid-area: fechaFin;
-}
-
-.mensaje {
-  grid-area: mensaje;
-}
-.mensaje textarea {
-  height: 90% !important;
-}
-
-.enviar {
-  grid-area: enviar;
-}
-
-.grid {
-  display: inline-grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr 1fr 1fr 3fr;
-  grid-template-areas: "nombre nombre nombre apellido apellido apellido" "telefono telefono telefono email email email" "pasajeros pasajeros fechaInicio fechaInicio fechaFin fechaFin" "mensaje mensaje mensaje mensaje mensaje mensaje" "enviar enviar enviar enviar enviar enviar";
-  height: 500px;
-  background-color: #1d7874;
-  grid-row-gap: 10px;
-  grid-column-gap: 10px;
-  padding: 2em;
-  border-radius: 20px;
-}
-
-.grid div input,
-select,
-textarea {
-  width: 100%;
-  height: 40px;
-}
-
-label,
-input[type=submit] {
-  color: #ecce8e;
-  font-weight: 800;
-}
-
-input[type=submit] {
-  background-color: #2b3a67;
-  border-radius: 10px;
-  border-color: #2b3a67;
-}
-
 @media only screen and (min-height: 796px) and (min-width: 651px) {
   .contacto {
     display: flex;
@@ -319,18 +335,6 @@ input[type=submit] {
     height: calc(100vh - 170px);
     margin: auto;
   }
-}
-@media only screen and (max-width: 650px) {
-  .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 1fr) 3fr 1fr;
-    grid-template-areas: "nombre" "apellido" "telefono" "email" "pasajeros" "fechaInicio" "fechaFin" "mensaje" "enviar";
-    height: auto;
-    width: 100%;
-  }
-}
-.about img {
-  max-width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
