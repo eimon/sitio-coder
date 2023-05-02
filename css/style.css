@@ -118,12 +118,6 @@ h1 {
 }
 .unidades img {
   border-radius: 20px;
-  transition-property: transform, box-shadow;
-  transition-duration: 1s;
-}
-.unidades img:hover {
-  transform: scale(1.3);
-  box-shadow: 3px 3px rgba(0, 0, 0, 0.1843137255);
 }
 
 /** Filas de características en la página principal**/
@@ -144,6 +138,42 @@ h1 {
 
 svg {
   margin: 8px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 450px !important;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.frente, .atras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.frente {
+  color: black;
+}
+
+.atras {
+  transform: rotateY(180deg);
 }
 
 .form {
