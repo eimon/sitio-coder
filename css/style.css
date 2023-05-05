@@ -129,6 +129,12 @@ h1 {
   width: 100%;
 }
 
+.presentacion {
+  font-size: 25px;
+  color: white;
+  padding: 65px;
+}
+
 .flex-center {
   display: flex;
   flex-direction: row;
@@ -136,44 +142,35 @@ h1 {
   justify-content: center;
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ecce8e;
+}
+.info a {
+  text-decoration: none;
+}
+
 svg {
   margin: 8px;
 }
 
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 450px !important;
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.frente, .atras {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.frente {
-  color: black;
-}
-
+.frente,
 .atras {
-  transform: rotateY(180deg);
+  border: 2px solid white;
+  border-radius: 15px;
+}
+
+.flip-card {
+  height: 450px !important;
+  width: 100%;
+}
+
+.mobile, .desktop {
+  display: none;
+  justify-content: center;
 }
 
 .form {
@@ -219,10 +216,9 @@ form {
 .gracias {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .gracias h2 {
-  line-height: 600px;
-  text-align: center;
   color: #ecce8e;
   opacity: 1;
   animation: fade-in 1s;
@@ -353,17 +349,92 @@ footer input[type=submit] {
     height: 100%;
   }
 }
-@media screen only and (min-width: 797px) {
-  .form {
-    height: 500px;
-  }
-}
 @media only screen and (min-height: 796px) and (min-width: 651px) {
   .contacto {
     display: flex;
     align-items: center;
     height: calc(100vh - 170px);
     margin: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .frente, .atras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: #ecce8e;
+  }
+  .frente {
+    color: black;
+    overflow: hidden;
+  }
+  .atras {
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .desktop {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .unidad-1 {
+    background-image: url("../img/pixel.png"), url("../img/duplex.jpg");
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #ecce8e;
+  }
+  .unidad-2 {
+    background-image: url("../img/pixel.png"), url("../img/living.jpg");
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #ecce8e;
+  }
+  .unidad-3 {
+    background-image: url("../img/pixel.png"), url("../img/cocina.jpg");
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #ecce8e;
+  }
+  .frente {
+    display: none;
+  }
+  .mobile {
+    display: flex;
   }
 }
 
